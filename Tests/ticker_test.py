@@ -33,7 +33,7 @@ def test_spread() :
     return True, message
     #is_valid = validator.validate(responseJson)
 
-def this_test_valid_tere_no_correct_trade_name() :
+def test_this_valid_tere_no_correct_trade_name() :
     response = requests.get(baseUrlSpread)
     responseJson = json.loads(response.text)
     responseStr = json.dumps(responseJson)
