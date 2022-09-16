@@ -1,0 +1,68 @@
+{ "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "error": {
+            "type": "array",
+            "items": {}
+        },
+        "result": {
+            "type": "object",
+            "properties": {
+                "1INCH": {
+                    "type": "object",
+                    "properties": {
+                        "aclass": {
+                            "type": "string"
+                        },
+                        "altname": {
+                            "type": "string"
+                        },
+                        "decimals": {
+                            "type": "integer"
+                        },
+                        "display_decimals": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "aclass",
+                        "altname",
+                        "decimals",
+                        "display_decimals"
+                    ]
+                },
+                "AAVE": {
+                    "type": "object",
+                    "properties": {
+                        "aclass": {
+                            "type": "string"
+                        },
+                        "altname": {
+                            "type": "string"
+                        },
+                        "decimals": {
+                            "type": "integer"
+                        },
+                        "display_decimals": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "aclass",
+                        "altname",
+                        "decimals",
+                        "display_decimals"
+                    ]
+                }
+            },
+            "required": [
+                "1INCH",
+                "AAVE"
+            ]
+        }
+    },
+    "required": [
+        "error",
+        "result"
+    ]
+}

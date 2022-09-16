@@ -1,0 +1,63 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "error": {
+        "type": "array",
+        "items": {}
+      },
+      "result": {
+        "type": "object",
+        "properties": {
+          "XXBTZUSD": {
+            "type": "object",
+            "properties": {
+              "asks": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "array",
+                    "items": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "array",
+                    "items": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "required": [
+              "asks"
+            ]
+          }
+        },
+        "required": [
+          "XXBTZUSD"
+        ]
+      }
+    },
+    "required": [
+      "error",
+      "result"
+    ]
+  }
