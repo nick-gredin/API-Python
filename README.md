@@ -20,13 +20,17 @@ Pytest requires the test method names to start with `test`. All other method nam
 A sample test below :
 
 ```python
-def test_fetch_user() :
-    path = "api/users/2"
-    response = requests.get(url=baseUrl+path)
+def test_auth() :
+    path = "api/register"
+    response = requests.post(url=baseUrlAuthentication)
     responseJson = json.loads(response.text)
+    response.raise_for_status()  # raises exception when not a 2xx response
+    if response.status_code != 204:
+         return response.json()
     assert response.status_code == 200
-    assert jsonpath.jsonpath(responseJson,'$.data.first_name')[0] == 'Janet'
-    assert jsonpath.jsonpath(responseJson,'$.data.id')[0] == 2
+    print(responseJson['token'])
+    assert response.status_code == 200
+    assert type(jsonpath.jsonpath(responseJson,'$.token')[0]) == str
 
 ```
 ## Running tests
