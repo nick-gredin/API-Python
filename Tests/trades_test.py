@@ -33,7 +33,7 @@ def test_spread() :
     return True, message
     #is_valid = validator.validate(responseJson)
     
-def this_is_valid_failing_test_there_is_no_trade_namee() :
+def test_there_is_no_trade_name_this_is_valid_failing() :
     #file = open('TestData/trades_schema.json',"r")
     response = requests.get(baseUrlSpread)
     responseJson = json.loads(response.text)
